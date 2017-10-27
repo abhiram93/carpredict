@@ -381,7 +381,7 @@ var getValueFromML = function(door, persons, lugg, price, maint, safety , callba
 
 
 
-app.listen(3000, function() {
+app.listen(process.env.PORT||3000, function() {
   console.log('Server Started');
 
   init();
