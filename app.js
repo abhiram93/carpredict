@@ -335,9 +335,9 @@ var getValueFromML = function(door, persons, lugg, price, maint, safety , callba
   var AWS = require('aws-sdk');
   AWS.config.update({
   //  accessKeyId: "AKIAIWAOZMRO4QA7FZSQ",
-    accessKeyId: "AKIAJP4VG2GNWPLEMCEQ",
+    accessKeyId: "AKIAJ3DVGAUNLS2Q6U2Q",
   //  secretAccessKey: "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",
-    secretAccessKey: "AWTJ0rICt4WxMK50/G3uW4oNedb5jgTaO/bWldZ4",
+    secretAccessKey: "9F4KJqBS+Snb/sSVx5D725L+bSR8y4jzp0TDA/Sw",
     "region": "eu-west-1" //  <- If you want send something to your bucket, you need take off this settings, because the S3 are global.
   });
 
