@@ -1,0 +1,66 @@
+<% include partials/header.ejs%>
+<link rel="stylesheet" href="css/predict.css">
+  <div class="container">
+
+
+<div class="container1 vertical flat">
+  <h2>Your car will be <%= obj[0]%> </h2>
+  <div class="progress-bar">
+    <div class="progress-track">
+      <div class="progress-fill">
+        <span>Acceptable</span>
+        <span><%= obj[1]*100%>%</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="progress-bar">
+    <div class="progress-track">
+      <div class="progress-fill">
+          <span>Unacceptable</span>
+        <span><%= obj[2]*100%>%</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="progress-bar">
+    <div class="progress-track">
+      <div class="progress-fill">
+        <span>Good</span>
+        <span><%= obj[3]*100%>%</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="progress-bar">
+    <div class="progress-track">
+      <div class="progress-fill">
+        <span>Very Good</span>
+        <span><%= obj[4]*100%>%</span>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+<script type="text/javascript">
+$('.horizontal .progress-fill span').each(function(){
+var percent = $(this).html();
+$(this).parent().css('width', percent);
+});
+
+
+$('.vertical .progress-fill span').each(function(){
+var percent = $(this).html();
+var pTop = 100 - ( percent.slice(0, percent.length - 1) ) + "%";
+$(this).parent().css({
+'height' : percent,
+'top' : pTop
+});
+});
+</script>
+
+
+</div>

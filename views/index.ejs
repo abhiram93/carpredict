@@ -1,0 +1,198 @@
+<% include partials/header.ejs%>
+<link rel="stylesheet" href="css/index.css">
+
+
+<form action="/test" method="post">
+
+  <div class="jumbotron">
+    <h2>Please choose the following details to build car</h2>
+    <h3>1. Select Car Type</h3>
+    <div class="btn-group formgroup" data-toggle="buttons">
+
+      <label class="btn btn-primary active customradiocheckbox1">
+        <input  class="activeradio" type="radio" name="ctype" value="hatch" id="option1" autocomplete="off" checked> Hatch
+      </label>
+      <label class="btn btn-primary customradiocheckbox1">
+        <input  class="activeradio" type="radio" name="ctype" value="sedan" id="option2" autocomplete="off"> Sedan
+      </label>
+      <label class="btn btn-primary customradiocheckbox1">
+        <input  class="activeradio" type="radio" name="ctype" value="suv" id="option3" autocomplete="off"> SUV
+      </label>
+
+      <label class="btn btn-primary customradiocheckbox1">
+        <input  class="activeradio" type="radio" name="ctype" value="sports" id="option3" autocomplete="off"> Sports
+      </label>
+      <br>
+
+    </div>
+
+    <h3>2. Fuel Type</h3>
+
+    <div class="btn-group formgroup" data-toggle="buttons">
+
+      <label class="btn btn-primary active customradiocheckbox">
+        <input  class="activeradio" type="radio" name="ftype" value="petrol" id="option1" autocomplete="off" checked> Petrol
+      </label>
+      <label class="btn btn-primary customradiocheckbox">
+        <input  class="activeradio" type="radio" name="ftype" value="diesel" id="option2" autocomplete="off"> Diesel
+      </label>
+      <label class="btn btn-primary customradiocheckbox">
+        <input  class="activeradio" type="radio" name="ftype" value="hybrid" id="option3" autocomplete="off"> Hybrid
+      </label>
+
+      <label class="btn btn-primary customradiocheckbox">
+        <input  class="activeradio" type="radio" name="ftype" value="electric" id="option3" autocomplete="off"> Electric
+      </label>
+    </div>
+
+    <h3>3. Transmission</h3>
+
+    <div class="btn-group formgroup" data-toggle="buttons">
+
+      <label class="btn btn-primary active customradiocheckbox">
+        <input  class="activeradio" type="radio" name="ttype" value="1" id="option1" autocomplete="off" checked> Auto
+      </label>
+      <label class="btn btn-primary customradiocheckbox">
+        <input  class="activeradio" type="radio" name="ttype" value="0" id="option2" autocomplete="off"> Manual
+      </label>
+    </div>
+
+    <h3>4. Safety Features  (Mutiple options available)</h3>
+
+    <div class="btn-group formgroup" data-toggle="buttons">
+      <label class="btn btn-primary active customradiocheckbox">
+  <input  class="activeradio" type="checkbox" name="safety" value="abs" checked autocomplete="off">ABS
+</label>
+      <label class="btn btn-primary customradiocheckbox">
+  <input  class="activeradio" type="checkbox" name="safety" value="ebd" autocomplete="off">EBD
+</label>
+      <label class="btn btn-primary customradiocheckbox">
+  <input  class="activeradio" type="checkbox" name="safety" value="tc" autocomplete="off"> Traction Control
+</label>
+
+
+
+
+    </div>
+
+    <h3>5. Smart Features</h3>
+
+
+
+    <table class="table">
+      <thead>
+        <tr class="customtd">
+          <th class="customtd">Bundles</th>
+          <th class="customtd">Features</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr class="customtd">
+          <td class="customtd">
+            <div class="radio">
+              <label><input type="radio" checked="checked" name="smartf" value="bundle1" id='regular' name="optradio">Bundle 1</label>
+            </div>
+          </td>
+          <td class="customtd">
+            <div class="radiotext">
+              <label for='regular'>Navigation, Infotainment, Weather,	Traffic,	Convenience, Facilities</label>
+            </div>
+          </td>
+        </tr>
+
+
+
+
+
+        <tr class="customtd">
+          <td class="customtd">
+            <div class="radio">
+              <label><input type="radio" name="smartf" value="bundle2" id='express' name="optradio">Bundle 2</label>
+            </div>
+          </td>
+          <td class="customtd">
+            <div class="radiotext">
+              <label for='express'>Collision detection, Auto Park, Personal AI Assistant, Smart Car (Health Report/diagnostics)</label>
+            </div>
+          </td>
+        </tr>
+
+
+
+        <tr class="customtd">
+          <td class="customtd">
+            <div class="radio">
+              <label><input type="radio" name="smartf" value="bundle3" id='express' name="optradio">Bundle 3</label>
+            </div>
+          </td>
+          <td class="customtd">
+            <div class="radiotext">
+              <label for='express'>Bundle 1+ Bundle 2</label>
+            </div>
+          </td>
+        </tr>
+
+        <tr class="customtd">
+          <td class="customtd">
+            <div class="radio">
+              <label><input type="radio" name="smartf" value="nobundle" id='express' name="optradio">No Bundle</label>
+            </div>
+          </td>
+          <td class="customtd">
+            <div class="radiotext">
+              <label for='express'>No Smart Features</label>
+            </div>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+
+
+
+    <h3>6. Paint Choice</h3>
+
+    <div class="btn-group formgroup" data-toggle="buttons">
+
+      <label class="btn btn-primary active customradiocheckbox">
+      <input  class="activeradio" type="radio" name="ptype" value="metallic" id="option1" autocomplete="off" checked> Metallic
+    </label>
+      <label class="btn btn-primary customradiocheckbox">
+      <input  class="activeradio" type="radio" name="ptype" value="nonmetallic" id="option2" autocomplete="off"> Non-Metallic
+    </label>
+
+      <label class="btn btn-primary customradiocheckbox">
+        <input  class="activeradio" type="radio" name="ptype" value="special" id="option2" autocomplete="off"> Special
+      </label>
+    </div>
+
+
+    <h3>7. Road conditions affecting maintenance</h3>
+
+    <div class="btn-group formgroup" data-toggle="buttons">
+
+      <label class="btn btn-primary active customradiocheckbox">
+      <input  class="activeradio" type="radio" name="rdcond" value="good" id="option1" autocomplete="off" checked> Good
+    </label>
+      <label class="btn btn-primary customradiocheckbox">
+      <input  class="activeradio" type="radio" name="rdcond" value="bad" id="option2" autocomplete="off"> Bad
+    </label>
+
+      <label class="btn btn-primary customradiocheckbox">
+        <input  class="activeradio" type="radio" name="rdcond" value="verybad" id="option2" autocomplete="off"> Very Bad
+      </label>
+    </div>
+
+  </div>
+
+
+  <div class="">
+      <button type="submit" class="btn btn-success btn-block btn-xl ">Submit</button>
+  </div>
+
+
+
+
+</form>
